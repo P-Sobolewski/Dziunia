@@ -1,16 +1,32 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class Book {
+    private $title;
+    
+    
+    public function olaboga()
+    {
+        echo 'olaboga';
+    }
+    
+    public function __construct($title) {
+        $this->title = $title;
+    }
+    
+    public function wyswietlMiTytulKsiazko()
+    {
+        print_r($this->title);
+    }
+}
 
-/**
- * Description of newPHPClass
- *
- * @author pawelsobolewski
- */
-class newPHPClass {
-    //put your code here
+$kolekcjaKsiazek = array();
+
+$kolekcjaKsiazek[] = new Book('Jedynka');
+$kolekcjaKsiazek[] = new Book('Dwojka');
+$kolekcjaKsiazek[] = new Book('Trojka');
+$kolekcjaKsiazek[] = new Book('Czworka');
+
+foreach ($kolekcjaKsiazek as $ksiazka) {
+    $ksiazka->wyswietlMiTytulKsiazko();
+    $ksiazka->wyswietlMiTytulKsiazko();
 }
